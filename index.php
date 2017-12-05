@@ -1,17 +1,6 @@
 <?php 
 ini_set('display_errors', 'On');
 include 'controller.php';
-// function getBlock($file, $data = []){
-// 	require $file;
-// }
-// if (!empty($_GET['page']) && is_file('controller/'.$_GET['page'].'.php'))
-// {
-//         include 'controller/'.$_GET['page'].'.php';
-// }
-// else
-// {
-//         include 'controller/home.php';
-// }
 include 'header.php'; 
 ?>
 <section>

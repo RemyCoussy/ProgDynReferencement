@@ -1,10 +1,18 @@
 body{
 	margin: 0;
-	font-family: 'Sumana', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Playfair Display SC', sans-serif;
+	font-weight: 700;
 }
+h1{font-size: 50px;}
+h2{font-size: 45px;}
+h3{font-size: 35px;}
+
 header a, footer a{
 	color: white;
 	text-decoration: none;
@@ -24,3 +32,8 @@ nav li{
 	margin: 0 10px;
 	font-family: 'Lato', sans-serif;
 }
+dt{
+	margin-bottom: 15px;
+	padding: 15px 0;
+}
+dd{display: none;}
