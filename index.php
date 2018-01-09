@@ -3,16 +3,16 @@ ini_set('display_errors', 'On');
 include 'controller.php';
 include 'header.php'; 
 ?>
-<section>
-	<h3>Liste de films</h3>
+<section class="container" style="padding:50px 0;">
+	<h4>Liste de films</h4>
 	<ul>
 	<?php getAllMovies(); ?>
   	</ul>
-	<h3>Liste de réalisateurs</h3>
+	<h4>Liste de réalisateurs</h4>
 	<ul>
 	<?php getAllDirectors(); ?>
   	</ul>
-	<h3>Liste d'acteurs</h3>
+	<h4>Liste d'acteurs</h4>
 	<ul>
 	<?php getAllActors(); ?>
 	</ul>

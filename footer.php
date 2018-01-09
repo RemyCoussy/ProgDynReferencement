@@ -1,13 +1,19 @@
 </main>
 <footer>
 	<div class="container">
-		<p>Auteur : <a href="https://www.remy-coussy.fr" rel="author">Rémy Coussy</a></p>
+		<a href="https://www.remy-coussy.fr" class="btn" rel="author">Rémy Coussy</a>
 	</div>
 </footer>
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
 		/*Initialisation*/
+
+		$( window ).on('beforeunload', function() {
+			$('main').addClass("animate-out");
+			$('.loader').css('opacity','1');	
+		});
+
 		$('dt').each(function(){
 			$(this).data( "clic", { value:0 });
 		});
@@ -23,19 +29,19 @@
 		}
 		function orderQuestion(){
 			var orderDt = [];
-			var orderClic = [];
-			var order = [];
 			$('#faq > dt').each(function(){
-				orderDt.push($(this));
-				orderClic.push($(this).data('clic').value);
+				orderDt.push({element:$(this),clic:$(this).data('clic').value});
+				// .reussir a prendre les .next() pour l'affichage.
 			});
-			for ( i = 0; i < $('#faq > dt').length-1; i++) {
-				order[orderClic[i]] = orderDt[i];
-			}
-			orderDt.sort();
-			//console.log(orderDt,orderClic);
-			//console.log(orderClic.ass)
-			console.log(order);
+			var sorted = orderDt.sort(function(a, b) {
+  				return a.clic - b.clic;
+			}).reverse();
+			console.log(sorted);
+			console.log(sorted[1]['element'].html());
+			 $('#faq').html('');
+			for (var i = 0; i < sorted.length -1; i++) {
+			 	$('#faq').append(sorted[i]['element']);
+			 }
 
 		}
 		/*Actions*/
@@ -61,6 +67,12 @@
 			//console.log('clic sur cet élément : '+$(this).data('clic').value);
 			orderQuestion();
 		});
+		$('.dropdown').on('click',function(){
+			$(this).children('ul').slideToggle();
+		});
+		$('.charger').on('click',function(){
+			$('.get-faq').load('/FAQ.php #faq');
+		})
 	})
 </script>
 </html>

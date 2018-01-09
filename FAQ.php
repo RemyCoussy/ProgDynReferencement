@@ -9,7 +9,7 @@
             <dd>détail 2</dd>
         </dl>
     </dd>
-  	<dt>Question ?</dt>
+  	<dt>Question 2 ?</dt>
   	<dd>
         <dl>
             <dt>réponse 1 partie 1</dt>
@@ -18,7 +18,7 @@
             <dd>détail 2</dd>
         </dl>
     </dd>
-	<dt>Question ?</dt>
+	<dt>Question  3 ?</dt>
 	<dd>
         <dl>
             <dt>réponse 1 partie 1</dt>
