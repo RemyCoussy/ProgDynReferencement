@@ -33,7 +33,7 @@ foreach ($info as $i){
 	$req3 = $db->query("INSERT INTO film_has_personne (`id_film`, `id_personne`,`role`) 
 	VALUES ('".$info['0']['film']."', '".$info['0']['id']."', '".$role."')");
 	$req5 = $db->query("INSERT INTO personne_has_photo (`id_personne`, `id_photo`)
-	VALUES ('".$info['0']['id']."', '".$info['0']['img']."')");
+	VALUES ('".$info['0']['id']."', '/img/".$info['0']['img']."')");
 }
 
 include 'header.php';
